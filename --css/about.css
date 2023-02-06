@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --color-primary: #6c63ff;
+  --color-success: #00bf8e;
+  --color-warning: #f7c94b;
+  --color-danger: #f75842;
+  --color-danger-variant: rgba(247, 88, 66, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.7);
+  --color-black: #000;
+  --color-bg: #1f2641;
+  --color-bg1: #2e3267;
+  --color-bg2: #424890;
+
+  --container-width-lg: 76%;
+  --container-width-md: 90%;
+  --container-width-sm: 94%;
+
+  --transition: all 400ms ease;
+}
+
+body {
+  background: var(--color-bg);
+  font-family: monospace;
+}
+/* ======================================= HEADING ==================================== */
+
+.heading-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.heading-title h1 {
+  color: var(--color-white);
+  font-size: 3rem;
+  letter-spacing: 1.1px;
+}
+/* ======================================= NAVBAR ===================================== */
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3.5rem;
+  margin: 2rem auto;
+}
+
+.nav-links a {
+  color: var(--color-white);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-success);
+  border-bottom: 1px solid var(--color-warning);
+}
+/* ==================================== IMAGE ======================= */
+
+.profile-image-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.profile-image {
+  width: 20%;
+  border-radius: 10px;
+  animation: image-fade-in 1s ease-out 1.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes image-fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.profile-image-container h1 {
+  color: var(--color-success);
+  margin-top: 2rem;
+}
+/* ==================================== ABOUT ============================ */
+
+.content-section {
+  /* width: 700px; */
+  max-width: 100%;
+  color: var(--color-white);
+  margin-top: 3.5rem;
+}
+
+.content-section h4 {
+  margin-bottom: 0.9rem;
+  color: var(--color-success);
+}
+/* ==================================== FOOTER ============================== */
+
+.footer {
+  color: var(--color-white);
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+/* ==================================== RESPONSIVENESS ======================= */
+
+@media screen and (max-width: 480px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  .profile-image {
+    width: 200px;
+  }
+}
